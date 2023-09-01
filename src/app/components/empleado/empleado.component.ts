@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {  Router } from '@angular/router';
-import { Persona } from 'src/app/model/Persona.model';
-import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.service';
+import { Router } from '@angular/router';
+import { Persona } from 'src/app/model/persona.model';
+import { ServiceService } from 'src/app/service/service.service';
 
 @Component({
   selector: 'app-empleado',
@@ -9,23 +9,23 @@ import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.serv
   styleUrls: ['./empleado.component.css']
 })
 export class EmpleadoComponent implements OnInit {
-  persona: Persona[] = [];
-  constructor(
-    private router: Router, private personaS:PersonaServiceTsService ) { }
+
+  empleado: Persona[] = [];
+  constructor(private router:Router, private empleadoS: ServiceService) { }
 
   ngOnInit(): void {
-    this.personaS.traer().subscribe(data => {this.persona= data});
+    this.empleadoS.traer().subscribe(data => {this.empleado= data});
   }
 
   cargarcliente(): void {
-    this.personaS.traer().subscribe((data: Persona[]) => {
-      this.persona = data;
+    this.empleadoS.traer().subscribe((data: Persona[]) => {
+      this. empleado = data;
     });
   }
 
   borrar(id?: number) {
     if (id != undefined) {
-      this.personaS.borrar(id).subscribe({
+      this.empleadoS.borrar(id).subscribe({
         next: () => {
           alert('se eliminó correctamente');
           this.cargarcliente();

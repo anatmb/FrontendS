@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
+  <title>Intranet Grupo Sima</title>
+</head>
+
+<body>
+  <!-- Inicio del menu -->
+  <header class="header" id="inicio"> 
+    <nav class="navbar navbar-expand-md bg-black">
+      <div class="container-fluid">
+        <!-- icono o nombre -->
+        <a class="navbar-brand logo" href="http://gruposima.ar/">
+          <img src="assets/img/logo.fwTransparente.png" class="img-fluid
+            bg-black alt="" width=" 250" height="">
+        </a>
+        <!-- boton Login -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</button>
+      </div>
+    </nav>
+  </header>
+  <!-- Final del encabezado-->
+  <main>
+    <section id="conocimiento" class="conocimiento">
+      <div class="container">
+        <div class="row p-3">
+          <div class="col-md-6 izquierdo">
+            <img src="assets/img/gpsNegro.png" class="rounded-circle" width="150px" height="150px" alt="..."
+              title="...">
+            <img src="assets/img/logo_global_argentina.fw.png" class="rounded-circle" width="150px" height="150px"
+              alt="..." title="...">
+            <br>
+            <img src="assets/img/LB.png" class="rounded-circle" width="150px" height="150px" alt="..." title="...">
+            <img src="assets/img/ecoklinVerde.png" class="rounded-circle" width="150px" height="150px" alt="..."
+              title="...">
+
+            <h1>Intranet</h1>
+            <h3>
+              Nuestra mision:
+              “Solucionar y asesorar para que puedas
+              sacar todo tu potencial.”
+            </h3>
+          </div>
+
+          <div class="col-md-6 derecho">
+            <img src="/assets/img/helpdesk.png" alt="" width="550" height="640" />
+          </div>
+        </div>
+        <
+    </section>
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-black">
+        <img src="assets/img/logo.fwTransparente.png" class="img-fluid
+         alt="" width="" height="">
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre de Usuario:</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Nunca compartille tu acesso con nadie más.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Haz check aqui</label>
+          </div>         
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Acceder</button>
+      </div>
+    </div>
+</div>
+  </main>
+
+  <footer class="bg-black text-white p-2">
+    <p class="float-end">
+      Buenos Aires - Argentina - 2023
+    </p>
+    <p>
+      Copyright:
+      <a href="https://moreirafrontend.web.app/"> Manoel Moreira Dev.</a>
+    </p>
+  </footer>
+  <!--LLamada bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

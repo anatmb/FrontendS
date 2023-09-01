@@ -10,8 +10,7 @@ import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GpsComponent } from './components/gps/gps.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
-import { InformacionempleadoComponent } from './components/informacionempleado/informacionempleado.component';
-import { SistemaComponent } from './components/sistema/sistema.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,13 +21,12 @@ import { SistemaComponent } from './components/sistema/sistema.component';
     MainComponent,
     FooterComponent,
     GpsComponent,
-    EmpleadoComponent,
-    InformacionempleadoComponent,
-    SistemaComponent
+    EmpleadoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

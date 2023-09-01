@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="galeria row g-0 justify-content-center align-items-center text-center">
+<div  class="galeria row g-0 justify-content-center align-items-center text-center">
   <div class="container">
     <div class="card">
       <div class="card-header">
@@ -23,22 +23,30 @@
         <table class="table table-hover">
           <thead>
             <tr class="text-center">
-              <th>Imagen</th>
-              <th>Legajo</th>
-              <th>Apellido y Nombre</th>
-              <th>Acción</th>
+              <th scope="col">AEP</th>
+              <th scope="col">Legajo</th>
+              <th scope="col">Apellido y Nombre</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acción</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let personas of persona" class="text-center">
-              <td>{{personas.img}}</td>
-              <td>{{personas.legajo}}</td>
-              <td>{{personas.nombreyapellido}}</td>
-              <td>{{personas.estado}}</td>
+            <!-- <tr *ngFor="let clientes of cliente" class="text-center"> -->
+            <tr *ngFor="let empleadosgps of empleado" class="text-center">
               <td>
-                <button (click)="borrar(personas.id)" class="btn btn-warning">BORRAR</button>
-                <button routerLink="/editcliente/{{personas.id}}" class="btn btn-danger"
-                  style="margin-left: 10px;">MODIFICAR</button>
+                <!-- <a class="navbar-brand " href="#">
+                  <img src="../../../assets/img/leoEjemploFigma.jpg" alt="Organigrama"
+                    class="img-fluid bg-black rounded-circle" width=" 50" height="">
+                </a> -->
+                <img  src={{empleadosgps.img}} class="img-fluid bg-black rounded-circle" alt="imagendeempleado" width=" 50" height="">
+              </td>
+              <td>{{empleadosgps.legajo}}</td>
+              <td>{{empleadosgps.nombreyapellido}}</td>
+              <td>{{empleadosgps.estado}}</td>
+
+              <td>
+                <button (click)="borrar(empleadosgps.id)" class="btn btn-warning">BORRAR</button>
+                <button class="btn btn-danger"   (click)="informacionempleado()" style="margin-left: 10px;">Ver</button>
               </td>
             </tr>
           </tbody>
@@ -48,6 +56,3 @@
   </div>
 </div>
 <app-footer></app-footer>
-
-
-<!------------------------------------------------------------->
