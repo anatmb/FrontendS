@@ -1,0 +1,334 @@
+ <section class="cuerpo ">
+    <header class="header" id="inicio">
+        <nav class="navbar navbar-expand-md bg-black">
+            <div class="container-fluid">
+                 <!-- icono o nombre -->
+                <a class="navbar-brand logo" href="http://gruposima.ar/">
+                    <img src="../../../assets/img/logo.png" alt="logo" class="img-fluid" width=" 250" height="">
+                </a>
+                 <!-- boton Login  -->
+                <div class="botones-menu">
+                    <button type="button" class="btn btn-danger " (click)="main()">Principal</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="main" class="main">
+        <nav>
+            <div class="nav nav-tabs " id="nav-tab" role="tablist">
+                <button class="nav-link nav-itemactive active " id="nav-tickets-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-tickets" type="button" role="tab" aria-controls="nav-tickets"
+                    aria-selected="true">Tickets</button>
+
+                <button class="nav-link nav-item  " id="nav-tutoriales-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-tutoriales" type="button" role="tab" aria-controls="nav-tutoriales"
+                    aria-selected="false">Tutoriales</button>
+
+                <button class="nav-link nav-item" id="nav-descarga-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-descarga" type="button" role="tab" aria-controls="nav-descarga"
+                    aria-selected="false">Descargar</button>
+            </div>
+        </nav>
+
+        <div class="tab-content" id="nav-tabContent">
+            <!--------------------------tiket------------------------------->
+            <div class="tab-pane fade show active p-2 fondo " id="nav-tickets" role="tabpanel"
+                aria-labelledby="nav-tickets-tab" tabindex="0">
+                <div class="row parrafo">
+                    <div class="col-lg-6">
+                        <div class=" row">
+                            <label for="inputPassword" class="col-sm-1 col-form-label"><img
+                                    src="../../../assets/icons/icons8-calendario-50.png" alt="logo" class="img-fluid"
+                                    width="40" height=""></label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Fecha solicitud:</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+                        <div class=" row">
+                            <label for="inputPassword" class="col-sm-1 col-form-label"><img
+                                    src="../../../assets/icons/icons8-invitado-masculino-64.png" alt="logo"
+                                    class="img-fluid" width=" 40" height=""></label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Persona contacto:</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <label for="inputPassword" class="col-sm-1 col-form-label"><img
+                                    src="../../../assets/icons/icons8-enviar-50.png" alt="logo" class="img-fluid"
+                                    width=" 40" height=""></label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Email:</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputPassword">
+                            </div>
+
+                        </div>
+                        <div class=" row">
+                            <label for="inputPassword" class="col-sm-1 col-form-label"><img
+                                    src="../../../assets/icons/icons8-mensaje-de-telefono-50.png" alt="logo"
+                                    class="img-fluid" width=" 40" height=""></label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Teléfono</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+                        <div class=" row">
+                            <label for="inputPassword" class="col-sm-12 col-form-label text-center">Descripción de la
+                                solicitud</label>
+                        </div>
+                        <div class=" row">
+                            <div class="col-sm-12">
+                                <textarea class="form-control" placeholder="Escribe la Descripción"
+                                    id="floatingTextarea"></textarea>
+                            </div>
+                        </div>
+                        <div class=" row">
+
+                            <label for="inputPassword" class="col-sm-12 col-form-label text-center"> <img
+                                    src="../../../assets/icons/icons8-marker-o-50.png" alt="logo" class="img-fluid"
+                                    width=" 30" height="">Localización del servicio:</label>
+
+                        </div>
+                        <div class=" row">
+
+                            <div class="col-sm-12">
+                                <input type="password" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class=" row">
+                            <h6>Agregar foto o capture de pantalla</h6>
+                            <p>Adjuntar archivo:</p>
+
+                        </div>
+                        <br>
+                        <div class=" row">
+                            <h6>Tipo de solicitud</h6>
+                            <div class="col-lg-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/icons/icons8-sirena-50.png" alt="logo"
+                                            class="img-fluid" width=" 40" height=""> Urgente!!!!
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/icons/icons8-últimas-48-horas-50.png" alt="logo"
+                                            class="img-fluid" width=" 40" height=""> Normal
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/icons/icons8-últimas-24-horas-50.png" alt="logo"
+                                            class="img-fluid" width=" 40" height=""> Importante!
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/icons/icons8-proyectos-50.png" alt="logo"
+                                            class="img-fluid" width=" 40" height=""> Proyecto
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <h6>¿Cual de las empresas del grupo
+                                solicita el servicio ?</h6>
+                            <div class="col-lg-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/img/Ellipse 33libertador.png" alt="logo"
+                                            class="img-fluid" width=" 40" height=""> Libertador
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/img/gpsNegro.png" alt="logo" class="img-fluid"
+                                            width=" 40" height=""> EZE
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/img/logo_global_argentina.fw.png" alt="logo"
+                                            class="img-fluid" width=" 40" height=""> Ramos Mejia
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/img/LB.png" alt="logo" class="img-fluid" width=" 40"
+                                            height=""> La Bizantina
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/img/gpsNegro.png" alt="logo" class="img-fluid"
+                                            width=" 40" height=""> AEP
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/img/ecoklinVerde.png" alt="logo" class="img-fluid"
+                                            width=" 40" height=""> Barracas
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class=" row botones1">
+                            <div class="col-lg-12 ">
+                                <button type="button" class="btn btn-danger cancelar">Cancelar</button>
+                                <button type="button" class="btn btn-success">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!----------------------------tutoriales---------------------------->
+           
+                <div class="tab-pane fade show  fondo" id="nav-tutoriales" role="tabpanel" aria-labelledby="nav-tutoriales-tab"
+                    tabindex="0">
+                    <h1 class="titulo">Tutoriales</h1>
+                    <div class="row g-5">
+                        <div class="col-lg-6 col-md-6 ">
+                            <div class="card f1" style="width: 30rem; ">
+                                <img class="img-fluid" src="../../../assets/img//Rectangle 10.png" alt="" width="100%"
+                                    height="15%">
+                                <div class="card-body">
+                                    <h5 class="card-title">Como instalar y utilizar Anydesk</h5>
+                                    <a href="https://www.youtube.com/watch?v=0BzTHmYfxgg"
+                                        class="btn btn-primary">ver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card f1 text-center " style="width:30rem;">
+                                <img class="img-fluid" src="../../../assets/img//Rectangle 9.png" alt="" width="100%"
+                                    height="15%">
+                                <div class="card-body">
+                                    <h5 class="card-title">Configurar el e-mail en el celular</h5>
+                                    <a href="https://www.youtube.com/watch?v=JfRzLkYUhsM"
+                                        class="btn btn-primary">ver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card f1 text-center" style="width: 30rem;">
+                                <img class="img-fluid" src="../../../assets/img//Rectangle 11.png" alt="" width="100%"
+                                    height="15%">
+                                <div class="card-body">
+                                    <h5 class="card-title">Instala y configurar la impresora
+                                        de red</h5>
+                                    <a href="https://www.youtube.com/watch?v=sm2ZWw_bSv8"
+                                        class="btn btn-primary">ver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 ">
+                            <div class="card f1 text-center" style="width:30rem;">
+                                <img class="img-fluid" src="../../../assets/img//Rectangle 12.png" alt="" width="100%"
+                                    height="15%">
+                                <div class="card-body">
+                                    <h5 class="card-title">No tengo internet, que
+                                        puedo intentar hacer</h5>
+                                    <a href="https://www.youtube.com/watch?v=zNppM4wy-WU"
+                                        class="btn btn-primary">ver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+
+            <!--------------------------Descargas-------------------------------->
+        
+                <div class="tab-pane fade show fondo" id="nav-descarga" role="tabpanel"
+                    aria-labelledby="nav-descarga-tab" tabindex="0">
+                    <h1 class="titulo">Descargar</h1>
+                    <div class="row g-5 f2">
+                        <div class="col-lg-6 col-md-6 ">
+                            <h3>Driver impresoras</h3>
+                            <ol class="list-group ">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HP LaserJet 1020</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Samsung ML-2165-W</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HP LaserJet 1020</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">HP LaserJet 1020</div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <h3>Programas</h3>
+                            <ol class="list-group ">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">WinRAR</div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">AnyDesk</div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+</section>
+<app-footer></app-footer>
+
+
+ 

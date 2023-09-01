@@ -1,0 +1,56 @@
+.galeria{
+    font-family: "Poppins", sans-serif;
+    /* padding-top: 1px; */
+    width:100%;
+    min-height: 100vh;
+    margin:0;
+    padding: 0;
+    background-color: #11354f;
+    justify-content: center;
+    align-items: center;
+  }
+/* .cuerpo1{
+    width:90%;
+    min-height: 70vh;
+    text-align: justify;
+    background-color: rgb(218, 219, 221);
+    text-align: center;
+    border-radius: 6px;
+    margin: 30px;
+} */
+
+/* .container-fluid{
+    width:100vw;
+    height:100vh;
+    text-align: justify;
+    background-color: #79d42d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.container{
+    width: 90%;
+}
+
+.botones{
+    text-align: right;
+    margin-right: 60px;
+    margin-top: 7px;
+}
+.botonnuevo{
+    margin-right: 20px;
+    margin-bottom: 0px;
+    height: 35px;
+    text-align: center;
+}
+.botonEditar{
+    margin-bottom: 0px;
+    height: 35px;
+    justify-content: center;
+}
+#div1 {
+    overflow:scroll;
+    height:300px;
+    width:100%;
+}

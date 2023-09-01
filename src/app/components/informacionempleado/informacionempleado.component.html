@@ -1,0 +1,501 @@
+
+  <header class="header" id="inicio">
+    <nav class="navbar navbar-expand-md bg-black">
+        <div class="container-fluid">
+            <!-- icono o nombre -->
+            <a class="navbar-brand logo" href="http://gruposima.ar/">
+                <img src="../../../assets/img/logo.png" alt="logo" class="img-fluid" width=" 250" height="">
+            </a>
+            <!-- boton Login -->
+            <div class="botones-menu">
+                <button type="button" class="btn btn-danger g-4" (click)="main()">Principal</button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="cuerpo">
+    <section id="main" class="main">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-perfil-tab" data-bs-toggle="tab" data-bs-target="#nav-perfil"
+                    type="button" role="tab" aria-controls="nav-perfil" aria-selected="true">Perfil</button>
+                <button class="nav-link " id="nav-operaciones-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-operaciones" type="button" role="tab" aria-controls="nav-operaciones"
+                    aria-selected="false">Operaciones</button>
+                <button class="nav-link" id="nav-indumentaria-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-indumentaria" type="button" role="tab" aria-controls="nav-indumentaria"
+                    aria-selected="false">Indumentaria</button>
+                <button class="nav-link" id="nav-capacitaciones-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-capacitaciones" type="button" role="tab" aria-controls="nav-capacitaciones"
+                    aria-selected="false">Capacitaciones</button>
+                <button class="nav-link" id="nav-credenciales-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-credenciales" type="button" role="tab" aria-controls="nav-credenciales"
+                    aria-selected="false">Credenciales</button>
+            </div>
+        </nav>
+
+
+        <!--------------------------Peril------------------------------->
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active fondo" id="nav-perfil" role="tabpanel"
+                aria-labelledby="nav-perfil-tab" tabindex="0">
+                <div class="container">
+                    <div class="row">
+                        <div class="foto col-lg-3 bg-white">
+                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama"
+                                class="img-fluid bg-black foto m-3" width="198" height="0">
+                            <button type="button" class="btn btn-success">Activo</button>
+                            <h6>Estado</h6>
+                            <p>Lopez Peralta, Edgardo </p>
+                        </div>
+                        <div class=" perfil col-lg-9">
+                            <table class="table">
+                                <tr>
+                                    <td><b>Apellido y Nombre:</b> Lopez Peralta, Edgardo</td>
+                                    <td><b>Dni: </b>26395665</td>
+                                    <td><b>Legajo:</b> 1235</td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Fecha/Nac:</b> 21/06/1984</td>
+                                    <td><b>Objetivo:</b>RAMPA</td>
+                                    <td><b>Turno:</b>Mañana</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Telefono Contacto:</b>1568394298</td>
+                                    <td><b>Cargo:</b> Vigilador/Bombero</td>
+                                    <td><b>E-mail</b>Email</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Dirección:</b>#N/A</td>
+                                    <td><b>Codigo Postal</b>#N/A</td>
+                                </tr>
+                            </table>
+                            <div class="botones">
+                                <button type="button" class="btn btn-primary m-2">Modificar</button>
+                                <button type="button" class="btn btn-success m-2">Guardar</button>
+                                <button type="button" class="btn btn-danger m-2">Borrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------------------------Operaciones---------------------------->
+            <div class="tab-pane fade fondo2" id="nav-operaciones" role="tabpanel" aria-labelledby="nav-operaciones-tab"
+                tabindex="0">
+                <div class="container">
+                    <div class="row">
+                        <div class="foto col-lg-3 bg-white">
+                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama" class="img-fluid foto m-3"
+                                width="198" height="0">
+                            <button type="button" class="btn btn-success">Activo</button>
+                            <h6>Estado</h6>
+                            <p>Lopez Peralta, Edgardo </p>
+                        </div>
+                        <div class="col-lg-9 cursos">
+                            <br>
+                            <div class="wrapper-calendar">
+                                <div class="header-calendar">
+                                    <div>
+                                        <button (click)="changeMonth(-1)" class="btn-prev">Antes</button>
+                                    </div>
+                                    <h1>{{dateSelect | date:'MMMM, yyyy'}}</h1>
+                                    <div>
+                                        <button (click)="changeMonth(1)" class="btn-next">Siguiente</button>
+                                    </div>
+                                </div>
+                                <ol>
+                                    <li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
+                                    <li (click)="clickDay(day)"
+                                        [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
+                                        *ngFor="let day of monthSelect;let first = first">
+                                        <span>{{day?.value}}</span>
+                                    </li>
+                                </ol>
+                            </div>
+
+                            <!-- <hr>
+                            <div>
+                                Fecha: {{dateValue | date}}
+                            </div> -->
+                            <br><br><br><br>
+                            <div class="botones">
+                                <button type="button" class="btn btn-primary m-2">Modificar</button>
+                                <button type="button" class="btn btn-success m-2">Guardar</button>
+                                <button type="button" class="btn btn-danger m-2">Borrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------Indumentaria-------------------------------->
+            <div class="tab-pane fade fondo3" id="nav-indumentaria" role="tabpanel"
+                aria-labelledby="nav-indumentaria-tab" tabindex="0">
+                <div class="social">
+                    <ul>
+                        <li> <label for="btn-modal" class="lbl-modal">U<br>n<br>i<br>f<br>o<br>r<br>m<br>e<br>s</label>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <input type="checkbox" id="btn-modal">
+                <div class="modal">
+                    <div class="contenedor">
+                        <header>Tipos de Uniformes</header>
+                        <label for="btn-modal">X</label>
+                        <div class="contenido">
+                            <h4>UNIFORME VIGILADOR GPS HOMBRE/MUJER</h4>
+                            <p>CAMISA UNISEX 3 BORDADOS
+                                PANTALON RECTO
+                                CORBATA GPS
+                                CHALECO FLUO Amarillo
+                                CINTA PORTA CREDENCIAL
+                                ZAPATOS DE SEGURIDAD
+                                CAMPERA REFLEX GPS
+                                SORDINA
+                                CINTURON
+                            </p>
+                            <h4>UNIFORME VIGILADOR GLOBAL HOMBRE/MUJER </h4>
+                            <p>CAMISA UNISEX 3 BORDADOS GLOBAL
+                                PANTALON FAJINA
+                                CHALECO FLUO Amarillo
+                                CINTA PORTA CREDENCIAL
+                                CORBATA GLOBAL
+                                ZAPATOS DE SEGURIDAD
+                                POLAR GLOBAL
+                                CAMPERA REFLEX GLOBAL
+                                CINTURON </p>
+                            <h4>UNIFORMES PROFILER MUJER </h4>
+                            <p>CAMISA DE VESTIR MUJER 3/4
+                                PANTALON VESTIR MUJER
+                                SACOS PROFILERS MUJER
+                                PAÑUELO
+                                CHALECO FLUO Amarillo
+                                CINTA PORTA CREDENCIAL
+                                ZAPATOS DE SEGURIDAD
+                                CAMPERA REFLEX GPS </p>
+                            <h4>UNIFORME PROFILER HOMBRE </h4>
+                            <p>CAMISA DE VESTIR HOMBRE ML
+                                PANTALON VESTIR HOMBRE
+                                SACOS PROFILERS HOMBRE
+                                CORBATA GPS
+                                CHALECO FLUO Amarillo
+                                CINTA PORTA CREDENCIAL
+                                ZAPATOS DE SEGURIDAD
+                                CAMPERA REFLEX GPS </p>
+                            <h4>LPO</h4>
+                            <p>CHOMBA BRIGADISTA
+                                PANTALON FAJINA HOMBRE
+                                CHALECO FLUO Amarillo
+                                CINTA PORTA CREDENCIAL
+                                ZAPATOS DE SEGURIDAD
+                                CAMPERA REFLEX GPS
+                                SORDINA & GORRO
+                                CHALECO FLUO Naranja
+                                CINTA PORTA CREDENCIAL
+                                BORCEGOS </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="foto col-lg-3 bg-white">
+                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama" class="img-fluid foto m-3"
+                                width="198" height="0">
+                            <button type="button" class="btn btn-success">Activo</button>
+                            <h6>Estado</h6>
+                            <p>Lopez Peralta, Edgardo </p>
+                        </div>
+                        <div class="col-lg-9 cursos">
+
+                            <div class="row">
+
+                                <div class="col-lg-12 my-2">
+                                    <label class="mx-2 titulo " for="name">Fecha últimas entrega</label>
+                                    <input type="text" id="name" name="user_name" />
+                                    <label for="name " class="mx-2 titulo">Fecha de próxima entrega</label>
+                                    <input type="text" id="name" style="width: 200px;" name="user_name" />
+                                    <br>
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <label class="my-2 mx-2 titulo" for="name">Uniforme 1:</label>
+                                    <input type="text" id="name" name="user_name" />
+
+                                    <table class="table cabeza ">
+                                        <thead>
+                                            <tr class="fila1">
+                                                <th scope="col">Indumentaria</th>
+                                                <th scope="col">Talle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="fila1">
+                                                <th scope="col">Pantalon</th>
+                                                <th scope="row">38</th>
+                                            </tr>
+                                            <tr class="fila1">
+                                                <th scope="col">Chomba</th>
+                                                <th scope="row">L</th>
+                                            </tr>
+                                            <tr class="fila1">
+                                                <th scope="col">Zapato</th>
+                                                <th scope="row">42</th>
+                                            </tr>
+                                            <tr class="fila1">
+                                                <th scope="col">Polar</th>
+                                                <th scope="row">XL</th>
+                                            </tr>
+                                            <tr class="fila1">
+                                                <th scope="col">Campera</th>
+                                                <th scope="row">XL</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <label class="my-2 mx-2 titulo" for="name">Uniforme 2:</label>
+                                    <input class="my-2 mx-2 " type="text" id="name" name="user_name" />
+
+
+                                    <table class="table cabeza ">
+                                        <thead>
+                                            <tr class="fila1">
+                                                <th scope="col">Indumentaria</th>
+                                                <th scope="col">Talle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="fila1">
+                                                <th scope="col">Pantalon</th>
+                                                <th scope="row">38</th>
+                                            </tr>
+                                            <tr class="fila1">
+                                                <th scope="col">Chomba</th>
+                                                <th scope="row">L</th>
+                                            </tr>
+                                            <tr class="fila1">
+                                                <th scope="col">Zapato</th>
+                                                <th scope="row">42</th>
+                                            </tr>
+                                            <tr class="fila1">
+                                                <th scope="col">Polar</th>
+                                                <th scope="row">XL</th>
+                                            </tr>
+                                            <tr class="fila1">
+                                                <th scope="col">Campera</th>
+                                                <th scope="row">XL</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="botones">
+                                <button type="button" class="btn btn-primary m-2">Modificar</button>
+                                <button type="button" class="btn btn-success m-2">Guardar</button>
+                                <button type="button" class="btn btn-danger m-2">Borrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------------------------Capacitaciones---------------------------->
+            <div class="tab-pane fade fondo4" id="nav-capacitaciones" role="tabpanel"
+                aria-labelledby="nav-capacitaciones-tab" tabindex="0">
+                <div class="container">
+                    <div class="row">
+                        <div class="foto col-lg-3 bg-white">
+                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama"
+                                class="img-fluid bg-black foto m-3" width="198" height="0">
+                            <button type="button" class="btn btn-success">Activo</button>
+                            <h6>Estado</h6>
+                            <p>Lopez Peralta, Edgardo </p>
+                        </div>
+                        <div class="capacitaciones col-lg-9">
+                            <div class="container text-center texto">
+                                <div class="row justify-content-md-center ">
+                                    <div class="col col-lg-2 clase">
+                                        21/06/2023
+                                        <hr>
+                                        Capacitacion General
+                                    </div>
+                                    <div class="col-md-auto clase">
+                                        21/06/2017
+                                        <hr>
+                                        Curso PSA A001
+                                    </div>
+                                    <div class="col col-lg-2 clase ">
+                                        <div class="row">
+                                            <div class="col col-lg-12 ">
+                                                <button type="button" class="btn btn-danger my-2">Activo</button>
+                                            </div>
+                                            <div class="col col-lg-12 ">
+                                                RAYO - X
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row justify-content-md-center ">
+                                    <div class="col col-lg-2 clase">
+                                        21/06/2023
+                                        <hr>
+                                        Paletas Detectore Metales
+                                    </div>
+                                    <div class="col-md-auto clase">
+                                        21/06/2023
+                                        <hr>
+                                        Curso PSA A002
+                                    </div>
+                                    <div class="col col-lg-2 clase ">
+                                        <div class="row">
+                                            <div class="col col-lg-12 my-2 ">
+                                                <button type="button" class="btn btn-danger my-2">Activo</button>
+                                            </div>
+                                            <div class="col col-lg-12 ">
+                                                Supervisor
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row justify-content-md-center ">
+                                    <div class="col col-lg-2 clase">
+                                        21/06/2023
+                                        <hr>
+                                        Carga/Correo
+                                    </div>
+                                    <div class="col-md-auto clase">
+                                        21/06/2023
+                                        <hr>
+                                        Vto AMAM
+                                    </div>
+                                    <div class="col col-lg-2 clase ">
+                                        <div class="row">
+                                            <div class="col col-lg-12 ">
+                                                <button type="button" class="btn btn-danger my-2">Activo</button>
+                                            </div>
+                                            <br>
+                                            <div class="col col-lg-12 ">
+                                                Cred AMAM
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="botones">
+                                <button type="button" class="btn btn-primary m-2">Modificar</button>
+                                <button type="button" class="btn btn-success m-2">Guardar</button>
+                                <button type="button" class="btn btn-danger m-2">Borrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------Credenciales-------------------------------->
+            <div class="tab-pane fade fondo5" id="nav-credenciales" role="tabpanel"
+                aria-labelledby="nav-credenciales-tab" tabindex="0">
+                <div class="container">
+                    <div class="row">
+                        <div class="foto col-lg-3 bg-white">
+                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama"
+                                class="img-fluid bg-black foto m-3" width="198" height="0">
+                            <button type="button" class="btn btn-success">Activo</button>
+                            <h6>Estado</h6>
+                            <p>Lopez Peralta, Edgardo </p>
+                        </div>
+                        <div class="cursos1 col-lg-9">
+                            <div class="row text-center">
+                                <div class="col-lg-3">
+
+                                </div>
+                                <div class="col-lg-3">
+                                    <button type="button" class="btn btn-success">Activo</button><br>
+                                    Cred. Aeroportuaria
+                                </div>
+                                <div class="col-lg-3">
+                                    <button type="button" class="btn btn-success">Activo</button><br>
+                                    Supervisor
+                                </div>
+                                <div class="col-lg-3">
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row text-center">
+                                <div class="col-lg-3">
+                                    <button type="button" class="btn btn-success">Activo</button><br>
+                                    RAYO - X
+                                </div>
+                                <div class="col-lg-3">
+                                    <button type="button" class="btn btn-success">Activo</button><br>
+                                    BRIGADISTA
+                                </div>
+                                <div class="col-lg-3">
+                                    <button type="button" class="btn btn-success">Activo</button><br>
+                                    Cred AMAM
+                                </div>
+                                <div class="col-lg-3">
+                                    <button type="button" class="btn btn-success">Activo</button><br>
+                                    CARGA
+                                </div>
+                            </div>
+                            <br>
+
+                            <table class="table tabla header_fijo bg-black">
+                                <thead class="table-secondary">
+                                    <tr>
+                                        <th scope="col">Curso</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Caducidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td>Vto. PPP</td>
+                                        <td>21/06/2023</td>
+                                        <td>21/12/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Curso PSA A001</td>
+                                        <td>21/06/2023</td>
+                                        <td>21/12/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Curso PSA A002</td>
+                                        <td>21/06/2023</td>
+                                        <td>21/12/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Curso PSA A002</td>
+                                        <td>21/06/2023</td>
+                                        <td>21/12/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Curso PSA A002</td>
+                                        <td>21/06/2023</td>
+                                        <td>21/12/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Curso PSA A002</td>
+                                        <td>21/06/2023</td>
+                                        <td>21/12/2023</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="botones">
+                                <button type="button" class="btn btn-primary m-2">Modificar</button>
+                                <button type="button" class="btn btn-success m-2">Guardar</button>
+                                <button type="button" class="btn btn-danger m-2">Borrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+    <app-footer></app-footer>

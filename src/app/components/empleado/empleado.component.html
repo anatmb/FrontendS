@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="galeria row g-0 justify-content-center align-items-center text-center">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div class="row  py-2 text-center">
+          <div class="col-lg-2">
+            <a class="navbar-brand">
+              <img src="../../../assets/img/gpsNegro.png" alt="GPS" class="img-fluid bg-black rounded-circle"
+                width=" 45" height="">
+            </a>
+          </div>
+          <div class="col-lg-7">
+            <input type="email" class="form-control" id="exampleFormControlInput1"
+              placeholder="Ingresa el empleado a buscar">
+          </div>
+          <div class="col-lg-2">
+            <button type="button" class="btn btn-danger">Buscar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body" id="div1">
+        <table class="table table-hover">
+          <thead>
+            <tr class="text-center">
+              <th>Imagen</th>
+              <th>Legajo</th>
+              <th>Apellido y Nombre</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let personas of persona" class="text-center">
+              <td>{{personas.img}}</td>
+              <td>{{personas.legajo}}</td>
+              <td>{{personas.nombreyapellido}}</td>
+              <td>{{personas.estado}}</td>
+              <td>
+                <button (click)="borrar(personas.id)" class="btn btn-warning">BORRAR</button>
+                <button routerLink="/editcliente/{{personas.id}}" class="btn btn-danger"
+                  style="margin-left: 10px;">MODIFICAR</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+
+<!------------------------------------------------------------->
