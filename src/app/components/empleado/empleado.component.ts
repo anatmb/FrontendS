@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Persona } from 'src/app/model/persona.model';
-import { ServiceService } from 'src/app/service/service.service';
+
+import { PersonaEmpleado } from 'src/app/model/PersonaEmpleado.model';
+import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.service';
+
 
 @Component({
   selector: 'app-empleado',
@@ -10,15 +12,15 @@ import { ServiceService } from 'src/app/service/service.service';
 })
 export class EmpleadoComponent implements OnInit {
 
-  empleado: Persona[] = [];
-  constructor(private router:Router, private empleadoS: ServiceService) { }
+  empleado: PersonaEmpleado[] = [];
+  constructor(private router:Router, private empleadoS: PersonaServiceTsService) { }
 
   ngOnInit(): void {
     this.empleadoS.traer().subscribe(data => {this.empleado= data});
   }
 
   cargarcliente(): void {
-    this.empleadoS.traer().subscribe((data: Persona[]) => {
+    this.empleadoS.traer().subscribe((data: PersonaEmpleado[]) => {
       this. empleado = data;
     });
   }

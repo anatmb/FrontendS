@@ -1,14 +1,10 @@
-
-export class Persona{
-    subscribe(arg0: (data: any) => void, arg1: (err: any) => void): any {
-      throw new Error('Method not implemented.');
-    }
+export class PersonaEmpleado{
     id?: number;
     estadoEmpleado:string;
     DNIEmpleado : string;
     nombreEmpleado: string;
     apellidoEmpleado: string;
-    legajoEmpleado:number;
+    legajoEmpleado:string;
     fechaNacimientoEmpleado: Date;
     fechaAltaEmpleado: Date;
     objetivoEmpleado: string;
@@ -21,7 +17,7 @@ export class Persona{
     // img:string;
    
     constructor(estadoEmpleado:string,  DNIEmpleado : string, nombreEmpleado: string, 
-      apellidoEmpleado: string, legajoEmpleado:number, fechaNacimientoEmpleado: Date,
+      apellidoEmpleado: string, legajoEmpleado:string, fechaNacimientoEmpleado: Date,
       fechaAltaEmpleado: Date, objetivoEmpleado: string, turnoEmpleado: string,
       telefonoEmpleado:number, cargarEmpleado:string,emailEmpleado:string,
       direccionEmpleado: string,codigoPostalEmpleado: string,
@@ -49,5 +45,4 @@ export class Persona{
 
         // this.img= img;
     }
-  }
-  
+}

@@ -1,33 +1,33 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Persona } from '../model/Persona.model';
 import { HttpClient } from '@angular/common/http';
+import { PersonaEmpleado } from '../model/PersonaEmpleado.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaServiceTsService {
-  URL = 'http://localhost:8080/intranetsima/';
+  URL = 'http://localhost:8080/Empleado/';
   constructor(private httpClient: HttpClient) { }
 
-  public traer(): Observable<Persona[]> {
-    return this.httpClient.get<Persona[]>(this.URL + 'traer');
+  public traer(): Observable<PersonaEmpleado[]> {
+    return this.httpClient.get<PersonaEmpleado[]>(this.URL + 'traer');
   }
 
-  public borrar(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
-  }
+   public borrar(id: number): Observable<any> {
+     return this.httpClient.delete<any>(this.URL + `detail/${id}`);
+   }
 
-  public create(persona: Persona): Observable<any> {
-    return this.httpClient.post(this.URL + `create`, persona, { responseType: 'text' });
-  }
+   public create(persona: PersonaEmpleado): Observable<any> {
+     return this.httpClient.post(this.URL + `nuevo`, persona, { responseType: 'text' });
+   }
 
-  public detail(id: number): Observable<Persona> {
-    return this.httpClient.get<Persona>(this.URL + `detail/${id}`);
-  }
+   public detail(id: number): Observable<PersonaEmpleado> {
+     return this.httpClient.get<PersonaEmpleado>(this.URL + `detail/${id}`);
+   }
 
-  public actualizar(id: number, persona: Persona): Observable<any> {
-    console.log('onupdate', persona);
-    return this.httpClient.put(this.URL + `actualizar/${id}`, persona, { responseType: 'text' });
-  }
+   public actualizar(id: number, persona: PersonaEmpleado): Observable<any> {
+     console.log('onupdate', persona);
+     return this.httpClient.put(this.URL + `actualizar/${id}`, persona, { responseType: 'text' });
+   }
 }

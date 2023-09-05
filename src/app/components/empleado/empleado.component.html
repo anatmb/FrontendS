@@ -33,16 +33,17 @@
           <tbody>
             <!-- <tr *ngFor="let clientes of cliente" class="text-center"> -->
             <tr *ngFor="let empleadosgps of empleado" class="text-center">
-              <td>
+              <!-- <td> -->
                 <!-- <a class="navbar-brand " href="#">
                   <img src="../../../assets/img/leoEjemploFigma.jpg" alt="Organigrama"
                     class="img-fluid bg-black rounded-circle" width=" 50" height="">
                 </a> -->
-                <img  src={{empleadosgps.img}} class="img-fluid bg-black rounded-circle" alt="imagendeempleado" width=" 50" height="">
-              </td>
-              <td>{{empleadosgps.legajo}}</td>
-              <td>{{empleadosgps.nombreyapellido}}</td>
-              <td>{{empleadosgps.estado}}</td>
+                <!-- <img  src={{empleadosgps.img}} class="img-fluid bg-black rounded-circle" alt="imagendeempleado" width=" 50" height=""> -->
+              <!-- </td> -->
+              <td>{{empleadosgps.legajoEmpleado}}</td>
+              <td>{{empleadosgps.nombreEmpleado}}</td>
+              <td>{{empleadosgps.apellidoEmpleado}}</td>
+              <td>{{empleadosgps.estadoEmpleado}}</td>
 
               <td>
                 <button (click)="borrar(empleadosgps.id)" class="btn btn-warning">BORRAR</button>
