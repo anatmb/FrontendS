@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -11,6 +10,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GpsComponent } from './components/gps/gps.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { InformacionempleadoComponent } from './components/informacionempleado/informacionempleado.component';
+import { EditempleadoComponent } from './components/editempleado/editempleado.component';
+import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +24,15 @@ import {HttpClientModule} from '@angular/common/http';
     MainComponent,
     FooterComponent,
     GpsComponent,
-    EmpleadoComponent
+    EmpleadoComponent,
+    InformacionempleadoComponent,
+    EditempleadoComponent,
+    NuevoempleadoComponent
+
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

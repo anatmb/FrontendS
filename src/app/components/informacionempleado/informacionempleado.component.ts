@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NonNullableFormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment'
+import { Fecha } from 'src/app/model/Fecha.model';
+import { PersonaEmpleado } from 'src/app/model/PersonaEmpleado.model';
+import { FechaService } from 'src/app/service/fecha.service';
+import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.service';
 
 @Component({
   selector: 'app-informacionempleado',
@@ -8,7 +13,9 @@ import * as moment from 'moment'
   styleUrls: ['./informacionempleado.component.css']
 })
 export class InformacionempleadoComponent implements OnInit {
- 
+  empleado: PersonaEmpleado= new PersonaEmpleado(' ', ' ', ' ', ' ', ' ',new Date(),new Date(), ' ', ' ',0, ' ', ' ', ' ', ' ');
+
+  fechahabiles: string= " ";
 
   title(title: any) {
     throw new Error('Method not implemented.');
@@ -29,18 +36,27 @@ export class InformacionempleadoComponent implements OnInit {
   dateSelect: any;
   dateValue: any;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,
+    private activatedRouter: ActivatedRoute, 
+    private empleadoS: PersonaServiceTsService,
+    private fechaS: FechaService
+    ) { }
 
   ngOnInit(): void {
-    this.getDaysFromDate(12, 2020)
+   this.getDaysFromDate(9, 2023);
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.empleadoS.detail(id).subscribe(
+      data => {
+        this. empleado = data;
+        console.log("imprimir DNI "+this.empleado.dniempleado);
+      }
+    )
   }
-
   main(){
     this.router.navigate(['/main'])
   }
 
-
-
+  
   getDaysFromDate(month: number,year: number) {
 
     const startDate = moment.utc(`${year}/${month}/01`)
@@ -79,5 +95,18 @@ export class InformacionempleadoComponent implements OnInit {
     const objectDate = moment(parse)
     this.dateValue = objectDate;
   }
+
+  onCreate1(): void {
+    const Vfechadiahabiles = new Fecha(this.fechahabiles);
+
+    this.fechaS.create(Vfechadiahabiles).subscribe((res) =>
+      console.log(res)
+      
+    )
+    alert('Fecha agregada');
+    this.router.navigate([' ']);
+  }
+
+
 
 }

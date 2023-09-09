@@ -1,36 +1,36 @@
 export class PersonaEmpleado{
-    id?: number;
+    idEmpleado?: number;
     estadoEmpleado:string;
-    DNIEmpleado : string;
+    dniempleado: string;
     nombreEmpleado: string;
     apellidoEmpleado: string;
     legajoEmpleado:string;
-    fechaNacimientoEmpleado: Date;
+    fechaNascimentoEmpleado: Date;
     fechaAltaEmpleado: Date;
     objetivoEmpleado: string;
     turnoEmpleado: string;
     telefonoEmpleado:number;
-    cargarEmpleado:string;
+    cargoEmpleado:string;
     emailEmpleado:string;
     direccionEmpleado: string;
     codigoPostalEmpleado: string;
     // img:string;
    
-    constructor(estadoEmpleado:string,  DNIEmpleado : string, nombreEmpleado: string, 
-      apellidoEmpleado: string, legajoEmpleado:string, fechaNacimientoEmpleado: Date,
+    constructor(estadoEmpleado:string,  dniempleado: string, nombreEmpleado: string, 
+      apellidoEmpleado: string, legajoEmpleado:string, fechaNascimentoEmpleado: Date,
       fechaAltaEmpleado: Date, objetivoEmpleado: string, turnoEmpleado: string,
-      telefonoEmpleado:number, cargarEmpleado:string,emailEmpleado:string,
+      telefonoEmpleado:number, cargoEmpleado:string,emailEmpleado:string,
       direccionEmpleado: string,codigoPostalEmpleado: string,
       // img:string
       )
     {
       this.estadoEmpleado = estadoEmpleado;
-      this.DNIEmpleado = DNIEmpleado;
+      this.dniempleado = dniempleado;
       this.nombreEmpleado = nombreEmpleado;
 
       this. apellidoEmpleado =  apellidoEmpleado;
       this. legajoEmpleado = legajoEmpleado;
-      this.fechaNacimientoEmpleado =fechaNacimientoEmpleado;
+      this.fechaNascimentoEmpleado =fechaNascimentoEmpleado;
       this. fechaAltaEmpleado =  fechaAltaEmpleado;
 
       this.objetivoEmpleado = objetivoEmpleado;
@@ -38,7 +38,7 @@ export class PersonaEmpleado{
       this. telefonoEmpleado =  telefonoEmpleado;
 
 
-      this.cargarEmpleado =cargarEmpleado;
+      this.cargoEmpleado =cargoEmpleado;
       this.emailEmpleado = emailEmpleado;
       this.direccionEmpleado = direccionEmpleado;
       this.codigoPostalEmpleado = codigoPostalEmpleado;
