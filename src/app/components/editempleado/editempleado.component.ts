@@ -43,5 +43,9 @@ export class EditempleadoComponent implements OnInit {
   main(){
     this.router.navigate(['/main'])
   }
+  login(){
+    this.router.navigate(['/login'])
+  }
+
 
 }

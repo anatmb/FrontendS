@@ -7,7 +7,8 @@
             </a>
             <!-- boton Login -->
             <div class="botones-menu">
-                <button type="button" class="btn btn-danger g-4" (click)="main()">Principal</button>
+                <button type="button" class="btn btn-danger m-2" (click)="main()">MAIN</button>
+                <button type="button" class="btn btn-danger m-2 " (click)="login()" >LOGOUT</button>
             </div>
         </div>
     </nav>
@@ -49,13 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="turnoEmpleado">Turno</label>
-                    <!-- <input type="text" class="form-control" id="turnoEmpleado" name="turnoEmpleado" [(ngModel)]="empleado.turnoEmpleado" required> -->
-                    <select name="turno" id="turnoEmpleado">
-                        <optgroup label="select turno">
-                          <option value="volvo">Mañana</option>
-                          <option value="saab">Tarde</option>
-                        </optgroup>
-                      </select>
+                    <input type="text" class="form-control" id="turnoEmpleado" name="turnoEmpleado" [(ngModel)]="empleado.turnoEmpleado" required> 
                 </div>
                 <div class="form-group">
                     <label for="telefonoEmpleado">Telefono Contacto</label>

@@ -26,6 +26,8 @@ export class EmpleadoComponent implements OnInit {
     });
   }
 
+
+
   borrar(id?: number) {
     console.log("a ver que recibe" +id);
     if (id != undefined) {
@@ -53,6 +55,10 @@ export class EmpleadoComponent implements OnInit {
 
   main(){
     this.router.navigate(['/main'])
+  }
+
+  login(){
+    this.router.navigate(['/login'])
   }
 
 }
