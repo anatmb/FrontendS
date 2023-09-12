@@ -15,7 +15,7 @@ export class PersonaServiceTsService {
   }
 
    public borrar(id: number): Observable<any> {
-     return this.httpClient.delete<any>(this.URL + `detail/${id}`);
+     return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
    }
 
    public create(persona: PersonaEmpleado): Observable<any> {

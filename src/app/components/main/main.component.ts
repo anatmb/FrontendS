@@ -37,4 +37,8 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/main'])
   }
 
+  login(){
+    this.router.navigate(['/login'])
+  }
+
 }

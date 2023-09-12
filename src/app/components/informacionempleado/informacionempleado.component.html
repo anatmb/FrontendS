@@ -42,52 +42,50 @@
                 aria-labelledby="nav-perfil-tab" tabindex="0">
                 <div class="container">
                     <div class="row">
-                        <div class="foto col-lg-3 bg-white">
+                     <div class="foto col-lg-3 bg-white">
                             <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama"
-                                class="img-fluid bg-black foto m-3" width="198" height="0">
+                                class="img-fluid bg-black foto m-4" width="198" height="0">
+            
                             <button type="button" class="btn btn-success">Activo</button>
-                            <h6>Estado</h6>
-                            <p>Lopez Peralta, Edgardo </p>
+                            <h6>{{empleado.estadoEmpleado}}</h6>
+
+                            <p> {{empleado.nombreEmpleado}} {{empleado.apellidoEmpleado}}</p>
+                           
                         </div>
                         <div class=" perfil col-lg-9">
                             <table class="table">
                                 <tr>
-                                    <td><b>Apellido y Nombre:</b> Lopez Peralta, Edgardo</td>
-                                    <td><b>Dni: </b>26395665</td>
-                                    <td><b>Legajo:</b> 1235</td>
+                                    <td><b>Apellido y Nombre:</b>{{empleado.nombreEmpleado}} {{empleado.apellidoEmpleado}}</td>
+                                    <td><b>Dni:</b>{{empleado.dniempleado}}</td>
+                                    <td><b>Legajo:</b>{{empleado.legajoEmpleado}}</td>
 
                                 </tr>
                                 <tr>
-                                    <td><b>Fecha/Nac:</b> 21/06/1984</td>
-                                    <td><b>Objetivo:</b>RAMPA</td>
-                                    <td><b>Turno:</b>Mañana</td>
+                                    <td><b>Fecha/Nac:</b>{{empleado.fechaNascimentoEmpleado}}</td>
+                                    <td><b>Objetivo:</b>{{empleado.objetivoEmpleado}}</td>
+                                    <td><b>Turno:</b>{{empleado.turnoEmpleado}}</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Telefono Contacto:</b>1568394298</td>
-                                    <td><b>Cargo:</b> Vigilador/Bombero</td>
-                                    <td><b>E-mail</b>Email</td>
+                                    <td><b>Telefono Contacto:</b>{{empleado.telefonoEmpleado}}</td>
+                                    <td><b>Cargo:</b> {{empleado.cargoEmpleado}}</td>
+                                    <td><b>E-mail</b> {{empleado.emailEmpleado}}</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Dirección:</b>#N/A</td>
-                                    <td><b>Codigo Postal</b>#N/A</td>
+                                    <td><b>Dirección:</b>{{empleado.direccionEmpleado}}</td>
+                                    <td><b>Codigo Postal</b>{{empleado.codigoPostalEmpleado}}</td>
                                 </tr>
                             </table>
-                            <div class="botones">
-                                <button type="button" class="btn btn-primary m-2">Modificar</button>
-                                <button type="button" class="btn btn-success m-2">Guardar</button>
-                                <button type="button" class="btn btn-danger m-2">Borrar</button>
-                            </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>
             <!----------------------------Operaciones---------------------------->
-            <div class="tab-pane fade fondo2" id="nav-operaciones" role="tabpanel" aria-labelledby="nav-operaciones-tab"
+            <div class="tab-pane fade fondo" id="nav-operaciones" role="tabpanel" aria-labelledby="nav-operaciones-tab"
                 tabindex="0">
                 <div class="container">
                     <div class="row">
                         <div class="foto col-lg-3 bg-white">
-                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama" class="img-fluid foto m-3"
+                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama" class="img-fluid foto m-4"
                                 width="198" height="0">
                             <button type="button" class="btn btn-success">Activo</button>
                             <h6>Estado</h6>
@@ -106,7 +104,7 @@
                                     </div>
                                 </div>
                                 <ol>
-                                    <li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
+                                    <li *ngFor="let day of week" class="day-name">{{day}}</li>
                                     <li (click)="clickDay(day)"
                                         [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
                                         *ngFor="let day of monthSelect;let first = first">
@@ -119,6 +117,25 @@
                             <div>
                                 Fecha: {{dateValue | date}}
                             </div> -->
+
+                            <div>
+                                <!---------------------------------------------------->
+                                <form (ngSubmit)="onCreate1()"  novalidate #f="ngForm" >
+                                    
+                            
+                                    <div class="form-group">
+                                        <label for="fecha">Fecha:</label>
+                                        <input type="text" class="form-control" id="fecha" name="fecha" [(ngModel)]=dateValue  required>
+                                    </div>
+                            
+                                    <button type="submit"class="btn btn-danger">
+                                        Agregar Fecha
+                                    </button>
+                                </form>
+                               <!---------------------------------------------------->
+                               <br>
+                                Fecha: {{dateValue | date}} 
+                            </div>
                             <br><br><br><br>
                             <div class="botones">
                                 <button type="button" class="btn btn-primary m-2">Modificar</button>
@@ -130,7 +147,7 @@
                 </div>
             </div>
             <!--------------------------Indumentaria-------------------------------->
-            <div class="tab-pane fade fondo3" id="nav-indumentaria" role="tabpanel"
+            <div class="tab-pane fade fondo" id="nav-indumentaria" role="tabpanel"
                 aria-labelledby="nav-indumentaria-tab" tabindex="0">
                 <div class="social">
                     <ul>
@@ -203,7 +220,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="foto col-lg-3 bg-white">
-                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama" class="img-fluid foto m-3"
+                            <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama" class="img-fluid foto m-4"
                                 width="198" height="0">
                             <button type="button" class="btn btn-success">Activo</button>
                             <h6>Estado</h6>
@@ -302,13 +319,13 @@
                 </div>
             </div>
             <!----------------------------Capacitaciones---------------------------->
-            <div class="tab-pane fade fondo4" id="nav-capacitaciones" role="tabpanel"
+            <div class="tab-pane fade fondo" id="nav-capacitaciones" role="tabpanel"
                 aria-labelledby="nav-capacitaciones-tab" tabindex="0">
                 <div class="container">
                     <div class="row">
                         <div class="foto col-lg-3 bg-white">
                             <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama"
-                                class="img-fluid bg-black foto m-3" width="198" height="0">
+                                class="img-fluid bg-black foto m-4" width="198" height="0">
                             <button type="button" class="btn btn-success">Activo</button>
                             <h6>Estado</h6>
                             <p>Lopez Peralta, Edgardo </p>
@@ -396,13 +413,13 @@
                 </div>
             </div>
             <!--------------------------Credenciales-------------------------------->
-            <div class="tab-pane fade fondo5" id="nav-credenciales" role="tabpanel"
+            <div class="tab-pane fade fondo" id="nav-credenciales" role="tabpanel"
                 aria-labelledby="nav-credenciales-tab" tabindex="0">
                 <div class="container">
                     <div class="row">
                         <div class="foto col-lg-3 bg-white">
                             <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama"
-                                class="img-fluid bg-black foto m-3" width="198" height="0">
+                                class="img-fluid bg-black foto m-4" width="198" height="0">
                             <button type="button" class="btn btn-success">Activo</button>
                             <h6>Estado</h6>
                             <p>Lopez Peralta, Edgardo </p>
@@ -496,6 +513,5 @@
                 </div>
             </div>
         </div>
-       
     </section>
     <app-footer></app-footer>

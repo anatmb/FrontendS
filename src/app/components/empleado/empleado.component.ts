@@ -13,6 +13,7 @@ import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.serv
 export class EmpleadoComponent implements OnInit {
 
   empleado: PersonaEmpleado[] = [];
+  
   constructor(private router:Router, private empleadoS: PersonaServiceTsService) { }
 
   ngOnInit(): void {
@@ -26,7 +27,9 @@ export class EmpleadoComponent implements OnInit {
   }
 
   borrar(id?: number) {
+    console.log("a ver que recibe" +id);
     if (id != undefined) {
+      console.log("entro");
       this.empleadoS.borrar(id).subscribe({
         next: () => {
           alert('se eliminó correctamente');
@@ -34,11 +37,16 @@ export class EmpleadoComponent implements OnInit {
         },
         error: (err) => {
           console.log(err);
-          alert('Error, No se pude eliminar el cliente');
+          alert('Error, No se pude eliminar el empleado 1');
         }
       });
     }
+    else{
+      alert('Error, algo pasa con el id');
+    }
   }
+
+
   informacionempleado(){
     this.router.navigate(['/informacionempleado'])
   }

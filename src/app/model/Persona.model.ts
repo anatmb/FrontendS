@@ -3,7 +3,7 @@ export class Persona{
     subscribe(arg0: (data: any) => void, arg1: (err: any) => void): any {
       throw new Error('Method not implemented.');
     }
-    id?: number;
+    idEmpleado?: number;
     estadoEmpleado:string;
     DNIEmpleado : string;
     nombreEmpleado: string;

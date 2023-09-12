@@ -3,8 +3,9 @@
   <div class="container">
     <div class="card">
       <div class="card-header">
-        <div class="row  py-2 text-center">
-          <div class="col-lg-2">
+         <div class="row  py-2 text-center">
+
+          <!-- <div class="col-lg-2">
             <a class="navbar-brand">
               <img src="../../../assets/img/gpsNegro.png" alt="GPS" class="img-fluid bg-black rounded-circle"
                 width=" 45" height="">
@@ -16,8 +17,28 @@
           </div>
           <div class="col-lg-2">
             <button type="button" class="btn btn-danger">Buscar</button>
-          </div>
+          </div>  -->
+          <form class="from-inline" th:action="@{/}">
+            <div class="col-auto">
+              <a class="navbar-brand">
+                <img src="../../../assets/img/gpsNegro.png" alt="GPS" class="img-fluid bg-black rounded-circle"
+                  width=" 45" height="">
+              </a>
+            </div>
+            <div class="col-auto">
+              <label for="empleadoabuscar" class="visually-hidden">Empleado a buscar</label>
+              <input type="text" name="empleadoabuscar" class="form-control" id="empleadoabuscar" th:value="${empleadoabuscar}" placeholder="Ingresa el empleado a buscar......." required>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3" value="Buscar">Buscar</button>
+            </div>
+          </form>
         </div>
+        <h2>Ingrese nuevo Empleado</h2>
+        <!-- routerLink="/nuevocliente" -->
+        <button type="button" class="btn btn-dark col-lg-2" routerLink="/nuevoempleado" >
+          Nuevo Empleado
+      </button>
       </div>
       <div class="card-body" id="div1">
         <table class="table table-hover">
@@ -46,8 +67,9 @@
               <td>{{empleadosgps.estadoEmpleado}}</td>
 
               <td>
-                <button (click)="borrar(empleadosgps.id)" class="btn btn-warning">BORRAR</button>
-                <button class="btn btn-danger"   (click)="informacionempleado()" style="margin-left: 10px;">Ver</button>
+                <button (click)="borrar(empleadosgps.idEmpleado)" class="btn btn-warning">BORRAR</button>
+                <button class="btn btn-danger"  routerLink="/informacionempleado/{{empleadosgps.idEmpleado}}" style="margin-left: 10px;">Ver</button>
+                <button class="btn btn-danger"  routerLink="/editempleado/{{empleadosgps.idEmpleado}}" style="margin-left: 10px;">Modificar</button>
               </td>
             </tr>
           </tbody>
