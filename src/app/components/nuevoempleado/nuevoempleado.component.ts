@@ -1,4 +1,6 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersonaEmpleado } from 'src/app/model/PersonaEmpleado.model';
 import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.service';
@@ -28,14 +30,29 @@ export class NuevoempleadoComponent implements OnInit {
   objetivo =['EZEIZA','AEROPARQUE','CORDOBA'];
   cargo= ['Vigilador','Vig./Op. Rx., RRHH','Vig./Aux de Turno','SUPERVISOR','PAÑOL',
    'Vig./Brigadista'];
-  
+   contacto: FormGroup | undefined;
+   submitted = false;
+	title = 'Como Limitar Rangos de Fecha en un Calendario con Angular';
+   ahora: any;
+	deshabilitar: any; 
+   fingreso: string="";
+   falta: string="";
+  formBuilder: any;
   
   constructor(private router:Router,
-    private activatedRouter: ActivatedRoute, 
+    private activatedRouter: ActivatedRoute,
     private empleadoS: PersonaServiceTsService) { }
 
   ngOnInit(): void {
+
+    const datePite = new DatePipe('en-Us')
+		this.ahora = datePite.transform(new Date(), 'yyyy-MM-dd')
+   
   }
+
+  cambioFecha() {
+		this.deshabilitar = this.fingreso
+	}
 
   onCreate(): void {
     const VEmpleado = new PersonaEmpleado(this.estadoEmpleado, this.dniempleado, this.nombreEmpleado,
