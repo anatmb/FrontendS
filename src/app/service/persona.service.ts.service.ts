@@ -31,3 +31,6 @@ export class PersonaServiceTsService {
      return this.httpClient.put(this.URL + `actualizar/${id}`, persona, { responseType: 'text' });
    }
 }
+
+
+

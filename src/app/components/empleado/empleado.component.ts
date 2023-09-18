@@ -13,6 +13,7 @@ import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.serv
 export class EmpleadoComponent implements OnInit {
 
   empleado: PersonaEmpleado[] = [];
+  id: string= " ";
   
   constructor(private router:Router, private empleadoS: PersonaServiceTsService) { }
 
@@ -26,8 +27,9 @@ export class EmpleadoComponent implements OnInit {
     });
   }
 
-
-
+  onBuscar(id?: string){
+    console.log("a ver que recibe de buscar   " +id);
+  }
   borrar(id?: number) {
     console.log("a ver que recibe" +id);
     if (id != undefined) {

@@ -22,7 +22,7 @@
       <div class="card-header">
          <div class="row  py-2 text-center">
 
-           <div class="col-lg-2">
+           <!-- <div class="col-lg-2">
             <a class="navbar-brand">
               <img src="../../../assets/img/gpsNegro.png" alt="GPS" class="img-fluid bg-black rounded-circle"
                 width=" 45" height="">
@@ -34,8 +34,10 @@
           </div>
           <div class="col-lg-2">
             <button type="button" class="btn btn-danger">Buscar</button>
-          </div> 
-          <!-- <form class="from-inline" th:action="@{/}">
+          </div>  -->
+          
+
+        <form (ngSubmit)="onBuscar()"  novalidate #f="ngForm">
             <div class="col-lg-2">
               <a class="navbar-brand">
                 <img src="../../../assets/img/gpsNegro.png" alt="GPS" class="img-fluid bg-black rounded-circle"
@@ -43,13 +45,15 @@
               </a>
             </div>
             <div class="col-lg-8">
-              <label for="empleadoabuscar" class="visually-hidden">Empleado a buscar</label>
-              <input type="text" name="empleadoabuscar" class="form-control" id="empleadoabuscar" th:value="${empleadoabuscar}" placeholder="Ingresa el empleado a buscar......." required>
+              <label for="id" class="visually-hidden">Empleado palabra vlave</label>
+              <input type="text" class="form-control" id="id" name="id"
+                placeholder="Ingresa el id a buscar......." [(ngModel)]="id" required>
             </div>
             <div class="col-lg-2">
               <button type="submit" class="btn btn-primary mb-3" value="Buscar">Buscar</button>
             </div>
-          </form> -->
+          </form>
+          
         </div>
         <h2>Ingrese nuevo Empleado</h2>
         <!-- routerLink="/nuevocliente" -->
