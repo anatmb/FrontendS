@@ -35,7 +35,7 @@
           <div class="col-lg-2">
             <button type="button" class="btn btn-danger">Buscar</button>
           </div>  -->
-          
+      
 
         <form (ngSubmit)="onBuscar()"  novalidate #f="ngForm">
             <div class="col-lg-2">
@@ -45,12 +45,10 @@
               </a>
             </div>
             <div class="col-lg-8">
-              <label for="id" class="visually-hidden">Empleado palabra vlave</label>
-              <input type="text" class="form-control" id="id" name="id"
-                placeholder="Ingresa el id a buscar......." [(ngModel)]="id" required>
-            </div>
+              <label for="id" class="visually-hidden">Empleado el nombre a buscar</label>
+              <input type="text"  class="form-control" id="nombre" name="nombre" placeholder="Ingresa el Nombrea buscar......." [(ngModel)]='textoDeInput' required> </div>
             <div class="col-lg-2">
-              <button type="submit" class="btn btn-primary mb-3" value="Buscar">Buscar</button>
+              <button type="submit" *ngIf='textoDeInput' class="btn btn-primary mb-3" value="Buscar">Buscar</button>
             </div>
           </form>
           
