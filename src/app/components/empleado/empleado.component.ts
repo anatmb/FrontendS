@@ -14,6 +14,8 @@ export class EmpleadoComponent implements OnInit {
 
   empleado: PersonaEmpleado[] = [];
   textoDeInput: string = "";
+ 
+
   constructor(private router:Router, private empleadoS: PersonaServiceTsService) { }
 
   ngOnInit(): void {
@@ -26,11 +28,28 @@ export class EmpleadoComponent implements OnInit {
     });
   }
 
+  listaempleado(): void {
+    this.empleadoS.traer().subscribe((data) => {
+      this. empleado = data;
+    });
+  }
+
   onBuscar(){
     console.log("a ver que recibe de buscar   " +this.textoDeInput);
-    this.empleadoS.filtrar(this.textoDeInput);
-    this.cargarcliente();
+    this.empleadoS.filtrar(this.textoDeInput).subscribe({
+      next:() =>{
+        alert('se busco correctamente');
+        this.listaempleado();
+      },
+      error: (err) => {
+        console.log(err);
+        
+        alert('Error, No se encontro el empleado');
+      }
+    })
   }
+
+  
 
   borrar(id?: number) {
     console.log("a ver que recibe" +id);

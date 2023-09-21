@@ -30,8 +30,9 @@ export class PersonaServiceTsService {
      console.log('onupdate', persona);
      return this.httpClient.put(this.URL + `actualizar/${id}`, persona, { responseType: 'text' });
    }
-   public filtrar(_textoDeInput: string){
-    return this.httpClient.get<PersonaEmpleado>(this.URL + `search/${_textoDeInput}`);
+   public filtrar(_textoDeInput: string): Observable<PersonaEmpleado[]> {
+    return this.httpClient.get<PersonaEmpleado[]>(this.URL + `search/${_textoDeInput}`);
+
    }
 }
 
