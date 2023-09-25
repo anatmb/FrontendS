@@ -13,9 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { InformacionempleadoComponent } from './components/informacionempleado/informacionempleado.component';
 import { EditempleadoComponent } from './components/editempleado/editempleado.component';
-import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado.component';
-import { DatatableComponent } from './components/datatable/datatable.component';
-import { DataTablesModule } from "angular-datatables";
+import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +28,6 @@ import { DataTablesModule } from "angular-datatables";
     InformacionempleadoComponent,
     EditempleadoComponent,
     NuevoempleadoComponent,
-    DatatableComponent
 
   ],
   imports: [
@@ -38,7 +35,6 @@ import { DataTablesModule } from "angular-datatables";
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,28 +28,25 @@ export class EmpleadoComponent implements OnInit {
     });
   }
 
-  listaempleado(): void {
-    this.empleadoS.traer().subscribe((data) => {
-      this. empleado = data;
-    });
+  cargarclientebusqueda(data: PersonaEmpleado[]) {
+    this.empleado = data;
   }
 
-  onBuscar(){
-    console.log("a ver que recibe de buscar   " +this.textoDeInput);
-    this.empleadoS.filtrar(this.textoDeInput).subscribe({
-      next:() =>{
-        alert('se busco correctamente');
-        this.listaempleado();
-      },
-      error: (err) => {
-        console.log(err);
-        
-        alert('Error, No se encontro el empleado');
-      }
-    })
+  onBuscar() {
+    if (this.textoDeInput.trim() === "" || this.textoDeInput.trim() === null) {
+      alert('Debe ingresar un nombre valido');
+    }
+    else {
+      console.log("a ver que recibe del imput   " + this.textoDeInput);
+      this.empleadoS.buscar(this.textoDeInput).subscribe({
+        next: (data: PersonaEmpleado[]) => {
+          console.log("lo que trae del back "+ data)
+          data.length === 0 ? alert(' No se encontro el Empleado') : this.cargarclientebusqueda(data);
+        }
+      })
+    }
   }
 
-  
 
   borrar(id?: number) {
     console.log("a ver que recibe" +id);

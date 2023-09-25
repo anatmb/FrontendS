@@ -32,6 +32,11 @@
                         <label for="dniempleado">Dni</label>
                         <input type="text" class="form-control" id="dniempleado" name="dniempleado"  [(ngModel)]="dniempleado" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="direccionEmpleado">Dirección</label>
+                        <input type="text" class="form-control" id="direccionEmpleado" name="direccionEmpleado"  [(ngModel)]="direccionEmpleado" required>
+                    </div>
      
                     <div class="form-group">
                         <label for="legajoEmpleado">Legajo</label>
@@ -82,13 +87,22 @@
                             [(ngModel)]="emailEmpleado" required>
                     </div>
 
+                     
                     <div class="form-group">
-                        <label for="estadoEmpleado">Estado</label>
-                        <select id="occupation" name="occupation" class="form-select" aria-label="Default select example">
+                        <label for="codigoPostalEmpleado">Codifgo postal</label>
+                        <input type="text" class="form-control" id="codigoPostalEmpleado" name="codigoPostalEmpleado"
+                            [(ngModel)]="codigoPostalEmpleado" required>
+                    </div>
+
+                     <div class="form-group">
+                        <label for="testadoEmpleado">Estado</label>
+                        <select class="form-select" aria-label="Default select example">
                             <option *ngFor="let n of estado">{{ n }}</option>
                         </select>
                     </div>
 
+
+                  
                 </div>
               
                 <div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" value="Agregar empleado" />

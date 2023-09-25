@@ -8,29 +8,11 @@
     background-color: #11354f;
     justify-content: center;
     align-items: center;
-  }
-/* .cuerpo1{
-    width:90%;
-    min-height: 70vh;
-    text-align: justify;
-    background-color: rgb(218, 219, 221);
-    text-align: center;
-    border-radius: 6px;
-    margin: 30px;
-} */
-
-/* .container-fluid{
-    width:100vw;
-    height:100vh;
-    text-align: justify;
-    background-color: #79d42d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
+}
 .container{
     width: 90%;
+    background-color: #ffffff;
+    margin-top: 20px;
 }
 
 .botones{
@@ -49,8 +31,9 @@
     height: 35px;
     justify-content: center;
 }
-#div1 {
-    overflow:scroll;
-    height:300px;
-    width:100%;
+.footer{
+    position: fixed;
+    bottom: 0;   
+    width: 100%;
 }
+

@@ -108,6 +108,11 @@
                         <label for="dniempleado">Dni</label>
                         <input type="text" class="form-control" id="dniempleado" name="dniempleado" [(ngModel)]="empleado.dniempleado" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="direccionEmpleado">Dirección</label>
+                        <input type="text" class="form-control" id="direccionEmpleado" name="direccionEmpleado"  [(ngModel)]="empleado.direccionEmpleado" required>
+                    </div>
      
                     <div class="form-group">
                         <label for="legajoEmpleado">Legajo</label>
@@ -160,6 +165,12 @@
                         <select id="occupation" name="occupation" class="form-select" aria-label="Default select example">
                             <option *ngFor="let n of estado">{{ n }}</option>
                         </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="codigoPostalEmpleado">Codifgo postal</label>
+                        <input type="text" class="form-control" id="codigoPostalEmpleado" name="codigoPostalEmpleado"
+                            [(ngModel)]="empleado.codigoPostalEmpleado" required>
                     </div>
 
                 </div>

@@ -30,14 +30,18 @@ export class NuevoempleadoComponent implements OnInit {
   objetivo =['EZEIZA','AEROPARQUE','CORDOBA'];
   cargo= ['Vigilador','Vig./Op. Rx., RRHH','Vig./Aux de Turno','SUPERVISOR','PAÑOL',
    'Vig./Brigadista'];
-   contacto: FormGroup | undefined;
-   submitted = false;
+  contacto: FormGroup | undefined;
+  submitted = false;
 	title = 'Como Limitar Rangos de Fecha en un Calendario con Angular';
-   ahora: any;
+  ahora: any;
 	deshabilitar: any; 
-   fingreso: string="";
-   falta: string="";
+  fingreso: string="";
+  falta: string="";
   formBuilder: any;
+  seleccion:any;
+
+
+
   
   constructor(private router:Router,
     private activatedRouter: ActivatedRoute,

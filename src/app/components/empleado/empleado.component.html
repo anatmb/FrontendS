@@ -1,90 +1,92 @@
-<!-- <app-header></app-header> -->
-<header class="header" id="inicio">
-  <nav class="navbar navbar-expand-md bg-black">
-    <div class="container-fluid">
-      <!-- icono o nombre -->
-      <a class="navbar-brand logo" href="http://gruposima.ar/">
-        <img src="../../../assets/img/logo.png" alt="logo" class="img-fluid" width=" 250" height="">
-      </a>
-      <!-- boton Login -->
-      <div class="botones-menu">
-        <button type="button" class="btn btn-danger m-2" (click)="main()">MAIN</button>
-        <button type="button" class="btn btn-danger m-2 " (click)="login()">LOGOUT</button>
+<section class="cuerpo1">
+  <header class="header" id="inicio">
+    <nav class="navbar navbar-expand-md bg-black">
+      <div class="container-fluid">
+        <!-- icono o nombre -->
+        <a class="navbar-brand logo" href="http://gruposima.ar/">
+          <img src="../../../assets/img/logo.png" alt="logo" class="img-fluid bg-black" width=" 250" height="">
+        </a>
+        <!-- boton Login -->
+        <div class="botones-menu">
+          <button type="button" class="btn btn-danger m-2" (click)="main()">MAIN</button>
+          <button type="button" class="btn btn-danger m-2 " (click)="login()" >LOGOUT</button>
       </div>
-
-    </div>
-
-  </nav>
-</header>
-<!-- <div class="galeria row g-0 justify-content-center align-items-center text-center">
+      </div>
+    </nav>
+  </header>
   <div class="container">
-    <div class="card">
-      <div class="card-header">
-        <div class="row  py-2 text-center">
-          <form (ngSubmit)="onBuscar()" novalidate #f="ngForm">
-            <div class="row  py-1 text-center">
-              <div class="col-lg-2">
-                <a class="navbar-brand">
-                  <img src="../../../assets/img/gpsNegro.png" alt="GPS" class="img-fluid bg-black rounded-circle"
-                    width=" 45" height="">
-                </a>
-              </div>
-              <div class="col-lg-7">
-                <label for="id" class="visually-hidden">Empleado el nombre a buscar</label>
-                <input type="text" class="form-control" id="nombre" name="nombre"
-                  placeholder="Ingresa el Nombrea buscar......." [(ngModel)]='textoDeInput' required>
-              </div>
-              <div class="col-lg-2">
-                <button type="submit" *ngIf='textoDeInput' class="btn btn-primary mb-3" value="Buscar">Buscar</button>
-              </div>
-           </div>
-         </form>
+
+    <div class="row m-1">
+      <div class="col-lg-12 ">
+        <h4>Buscar Cliente</h4>
       </div>
-      <h2>Ingrese nuevo Empleado</h2>
-      <!-- routerLink="/nuevocliente" 
       <button type="button" class="btn btn-dark col-lg-2" routerLink="/nuevoempleado">
-        Nuevo Empleado
+        Agregar Empleado
       </button>
     </div>
-    <div class="card-body" id="div1">
-      <table class="table table-hover">
-        <thead>
-          <tr class="text-center">
-            <th scope="col">AEP</th>
-            <th scope="col">Legajo</th>
-            <th scope="col">Apellido y Nombre</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Acción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- <tr *ngFor="let clientes of cliente" class="text-center"> 
-          <tr *ngFor="let empleadosgps of empleado" class="text-center">
-            <!-- <td> -->
-            <!-- <a class="navbar-brand " href="#">
-                  <img src="../../../assets/img/leoEjemploFigma.jpg" alt="Organigrama"
-                    class="img-fluid bg-black rounded-circle" width=" 50" height="">
-                </a> -->
-            <!-- <img  src={{empleadosgps.img}} class="img-fluid bg-black rounded-circle" alt="imagendeempleado" width=" 50" height=""> -->
-            <!-- </td> 
-            <td>{{empleadosgps.legajoEmpleado}}</td>
-            <td>{{empleadosgps.nombreEmpleado}}</td>
-            <td>{{empleadosgps.apellidoEmpleado}}</td>
-            <td>{{empleadosgps.estadoEmpleado}}</td>
 
-            <td>
-              <button (click)="borrar(empleadosgps.idEmpleado)" class="btn btn-warning">BORRAR</button>
-              <button class="btn btn-danger" routerLink="/informacionempleado/{{empleadosgps.idEmpleado}}"
-                style="margin-left: 10px;">Ver</button>
-              <button class="btn btn-danger" routerLink="/editempleado/{{empleadosgps.idEmpleado}}"
-                style="margin-left: 10px;">Modificar</button>
-            </td>
-          </tr>
-        </tbody>
+    <div class="row encabezado p-3">
+      <div class="col-lg-2">
+        <a class="navbar-brand">
+          <img src="../../../assets/img/gpsNegro.png" alt="GPS" class="img-fluid bg-black rounded-circle" width=" 60"
+            height="">
+        </a>
+      </div>
+      <div class="col-lg-10">
+        <form novalidate #f="ngForm" (ngSubmit)="onBuscar()">
+          <div class="row text-center">
+            <div class="col-lg-9">
+              <!----[(ngModel)]='textoDeInput'-->
+              <input type="text" class="form-control" id="name" name="name"
+                placeholder="Ingresa el Nombrea buscar......." [(ngModel)]='textoDeInput' required>
+            </div>
+            <div class="col-lg-3">
+              <button type="submit" class="btn btn-primary mb-3 mx-3" value="Buscar">Buscar</button>          
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div>
+
+      <table class="table table-secondary table-hover">
+        <table class="table table-hover">
+          <thead>
+            <tr class="text-center">
+              <th scope="col">Legajo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let empleadosgps of empleado" class="text-center">
+              <td>{{empleadosgps.legajoEmpleado}}</td>
+              <td>{{empleadosgps.nombreEmpleado}}</td>
+              <td>{{empleadosgps.apellidoEmpleado}}</td>
+              <td>{{empleadosgps.estadoEmpleado}}</td>
+              <td>
+                <button (click)="borrar(empleadosgps.idEmpleado)" class="btn btn-warning">Borrar</button>
+                <button class="btn btn-danger" routerLink="/informacionempleado/{{empleadosgps.idEmpleado}}"
+                  style="margin-left: 10px;">Ver</button>
+                <button class="btn btn-danger" routerLink="/editempleado/{{empleadosgps.idEmpleado}}"
+                  style="margin-left: 10px;">Modificar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </table>
     </div>
-  </div>
-</div>
-</div> -->
-<app-datatable></app-datatable>
-<app-footer></app-footer>
+   </div>
+</section>
+<footer class=" d-flex bg-black justify-content-between text-white p-2 navbar-fixed-bottom footer">
+  <p class="float-end">
+    Buenos Aires - Argentina - 2023
+  </p>
+  <p>
+    Copyright:
+    <a href="https://moreirafrontend.web.app/"> M M Dev.</a>
+  </p>
+</footer>
