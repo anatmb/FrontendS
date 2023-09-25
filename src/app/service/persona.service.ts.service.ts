@@ -32,7 +32,7 @@ export class PersonaServiceTsService {
    }
  
   public buscar(textoDeInput: string): Observable<PersonaEmpleado[]> {
-    return this.httpClient.get<PersonaEmpleado[]>(this.URL + `buscar/${textoDeInput}`);
+    return this.httpClient.get<PersonaEmpleado[]>(this.URL + `search?nombreEmpleado=${textoDeInput}`);
   }
 
 }
