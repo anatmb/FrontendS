@@ -17,6 +17,7 @@
         <div class="card-header">
             <h3>Agregar Personas</h3>
         </div>
+<<<<<<< HEAD
             <form class="cbp-mc-form"  (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="cbp-mc-column">
                     <div class="form-group">
@@ -111,4 +112,83 @@
             </form>
         </div>
     </div>
+=======
+        <div class="card-body">
+            <form (ngSubmit)="onCreate()"  novalidate #f="ngForm" >
+                <div class="form-group">
+                    <label for="nombreEmpleado">Nombres:</label>
+                    <input type="text" class="form-control" id="nombreEmpleado" name="nombreEmpleado" [(ngModel)]="nombreEmpleado" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidoEmpleado">Apellido</label>
+                    <input type="text" class="form-control" id="apellidoEmpleado" name="apellidoEmpleado" [(ngModel)]="apellidoEmpleado" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dniempleado">Dni</label>
+                    <input type="text" class="form-control" id="dniempleado" name="dniempleado" [(ngModel)]="dniempleado" required>
+                </div>
+ 
+                <div class="form-group">
+                    <label for="legajoEmpleado">Legajo</label>
+                    <input type="text" class="form-control" id="legajoEmpleado" name="legajoEmpleado" [(ngModel)]="legajoEmpleado" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fechaNascimentoEmpleado">Fecha/Nac</label>
+                    <input type="datetime" class="form-control" id="fechaNascimentoEmpleado" name="fechaNascimentoEmpleado" [(ngModel)]="fechaNascimentoEmpleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaAltaEmpleado">Fecha/Alta</label>
+                    <input type="datetime" class="form-control" id="fechaAltaEmpleado" name="fechaAltaEmpleado" [(ngModel)]="fechaAltaEmpleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="objetivoEmpleado">Objetivo</label>
+                    <input type="text" class="form-control" id="objetivoEmpleado" name="objetivoEmpleado" [(ngModel)]="objetivoEmpleado" required>
+                </div>
+                <div class="form-group">
+                    <label for="turnoEmpleado">Turno</label>
+                    <input type="text" class="form-control" id="turnoEmpleado" name="turnoEmpleado" [(ngModel)]="turnoEmpleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefonoEmpleado">Telefono Contacto</label>
+                    <input type="number" class="form-control" id="telefonoEmpleado" name="telefonoEmpleado" [(ngModel)]="telefonoEmpleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cargoEmpleado">Cargo</label>
+                    <input type="text" class="form-control" id="cargoEmpleado" name="cargoEmpleado" [(ngModel)]="cargoEmpleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailEmpleado">Email</label>
+                    <input type="text" class="form-control" id="emailEmpleado" name="emailEmpleado" [(ngModel)]="emailEmpleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Direccion</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="direccionEmpleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="codigoPostalEmpleado">Codigo Postal</label>
+                    <input type="text" class="form-control" id="codigoPostalEmpleado" name="codigoPostalEmpleado" [(ngModel)]="codigoPostalEmpleado" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="estadoEmpleado">Estado</label>
+                    <input type="text" class="form-control" id="estadoEmpleado" name="estadoEmpleado" [(ngModel)]="estadoEmpleado" required>
+                </div>
+
+                <button type="submit"class="btn btn-danger">
+                    Agregar Empleado
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
 <app-footer></app-footer>

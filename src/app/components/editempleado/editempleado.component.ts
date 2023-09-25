@@ -10,11 +10,15 @@ import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.serv
 })
 export class EditempleadoComponent implements OnInit {
   empleado: PersonaEmpleado= new PersonaEmpleado(' ', ' ', ' ', ' ', ' ',new Date(),new Date(), ' ', ' ',0, ' ', ' ', ' ', ' ');
+<<<<<<< HEAD
   turno = ['Mañana', 'Tarde'];
   estado = ['Activo', 'Inactivo'];
   objetivo =['EZEIZA','AEROPARQUE','CORDOBA'];
   cargo= ['Vigilador','Vig./Op. Rx., RRHH','Vig./Aux de Turno','SUPERVISOR','PAÑOL',
    'Vig./Brigadista'];
+=======
+  
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
   constructor(
     private router:Router,
     private activatedRouter: ActivatedRoute, 
@@ -47,9 +51,12 @@ export class EditempleadoComponent implements OnInit {
   main(){
     this.router.navigate(['/main'])
   }
+<<<<<<< HEAD
   login(){
     this.router.navigate(['/login'])
   }
 
+=======
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
 
 }

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersonaEmpleado } from 'src/app/model/PersonaEmpleado.model';
 import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.service';
@@ -25,6 +29,7 @@ export class NuevoempleadoComponent implements OnInit {
   emailEmpleado:string=" ";
   direccionEmpleado: string=" ";
   codigoPostalEmpleado: string=" ";
+<<<<<<< HEAD
   turno = ['Mañana', 'Tarde'];
   estado = ['Activo', 'Inactivo'];
   objetivo =['EZEIZA','AEROPARQUE','CORDOBA'];
@@ -58,6 +63,17 @@ export class NuevoempleadoComponent implements OnInit {
 		this.deshabilitar = this.fingreso
 	}
 
+=======
+  
+  
+  constructor(private router:Router,
+    private activatedRouter: ActivatedRoute, 
+    private empleadoS: PersonaServiceTsService) { }
+
+  ngOnInit(): void {
+  }
+
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
   onCreate(): void {
     const VEmpleado = new PersonaEmpleado(this.estadoEmpleado, this.dniempleado, this.nombreEmpleado,
       this.apellidoEmpleado, this.legajoEmpleado, this. fechaNascimentoEmpleado, 

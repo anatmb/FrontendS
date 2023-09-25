@@ -13,9 +13,13 @@ import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.serv
 export class EmpleadoComponent implements OnInit {
 
   empleado: PersonaEmpleado[] = [];
+<<<<<<< HEAD
   textoDeInput: string = "";
  
 
+=======
+  
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
   constructor(private router:Router, private empleadoS: PersonaServiceTsService) { }
 
   ngOnInit(): void {

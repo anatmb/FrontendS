@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section class="cuerpo1">
   <header class="header" id="inicio">
     <nav class="navbar navbar-expand-md bg-black">
@@ -10,6 +11,34 @@
         <div class="botones-menu">
           <button type="button" class="btn btn-danger m-2" (click)="main()">MAIN</button>
           <button type="button" class="btn btn-danger m-2 " (click)="login()" >LOGOUT</button>
+=======
+<app-header></app-header>
+<div  class="galeria row g-0 justify-content-center align-items-center text-center">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div class="row  py-2 text-center">
+          <div class="col-lg-2">
+            <a class="navbar-brand">
+              <img src="../../../assets/img/gpsNegro.png" alt="GPS" class="img-fluid bg-black rounded-circle"
+                width=" 45" height="">
+            </a>
+          </div>
+          <div class="col-lg-7">
+            <input type="email" class="form-control" id="exampleFormControlInput1"
+              placeholder="Ingresa el empleado a buscar">
+          </div>
+          <div class="col-lg-2">
+            <button type="button" class="btn btn-danger">Buscar</button>
+          </div>
+        </div>
+
+        <h2>Ingrese nuevo Empleado</h2>
+        <!-- routerLink="/nuevocliente" -->
+        <button type="button" class="btn btn-dark col-lg-2" routerLink="/nuevoempleado" >
+          Nuevo Empleado
+      </button>
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
       </div>
       </div>
     </nav>
@@ -68,11 +97,17 @@
               <td>{{empleadosgps.apellidoEmpleado}}</td>
               <td>{{empleadosgps.estadoEmpleado}}</td>
               <td>
+<<<<<<< HEAD
                 <button (click)="borrar(empleadosgps.idEmpleado)" class="btn btn-warning">Borrar</button>
                 <button class="btn btn-danger" routerLink="/informacionempleado/{{empleadosgps.idEmpleado}}"
                   style="margin-left: 10px;">Ver</button>
                 <button class="btn btn-danger" routerLink="/editempleado/{{empleadosgps.idEmpleado}}"
                   style="margin-left: 10px;">Modificar</button>
+=======
+                <button (click)="borrar(empleadosgps.idEmpleado)" class="btn btn-warning">BORRAR</button>
+                <button class="btn btn-danger"  routerLink="/informacionempleado/{{empleadosgps.idEmpleado}}" style="margin-left: 10px;">Ver</button>
+                <button class="btn btn-danger"  routerLink="/editempleado/{{empleadosgps.idEmpleado}}" style="margin-left: 10px;">Modificar</button>
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
               </td>
             </tr>
           </tbody>

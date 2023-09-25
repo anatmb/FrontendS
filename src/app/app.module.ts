@@ -13,7 +13,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { InformacionempleadoComponent } from './components/informacionempleado/informacionempleado.component';
 import { EditempleadoComponent } from './components/editempleado/editempleado.component';
+<<<<<<< HEAD
 import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado.component'
+=======
+import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado.component';
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado
     EmpleadoComponent,
     InformacionempleadoComponent,
     EditempleadoComponent,
+<<<<<<< HEAD
     NuevoempleadoComponent,
+=======
+    NuevoempleadoComponent
+>>>>>>> 43d3ad5a9369461776d7b0efa3dc72926aaf7d06
 
   ],
   imports: [
