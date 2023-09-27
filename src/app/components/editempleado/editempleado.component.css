@@ -12,9 +12,6 @@ body{
 .cbp-mc-form {
     position: relative;
     }
-    
-    /* Clearfix hack by Nicolas Gallagher: 
-    http://nicolasgallagher.com/micro-clearfix-hack/ */
     .cbp-mc-form:before,
     .cbp-mc-form:after {
     content: " "; display: table;
@@ -32,7 +29,7 @@ body{
     
     .cbp-mc-form label {
     display: block;
-    padding: 40px 5px 5px 2px;
+    padding: 20px 5px 5px 2px;
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -101,7 +98,7 @@ body{
     }
     
     .cbp-mc-form input.cbp-mc-submit {
-    background: #10689a;
+    background: rgb(224, 28, 28);
     border: none;
     color: #fff;
     width: auto;
@@ -110,12 +107,12 @@ body{
     display: inline-block;
     padding: 15px 30px;
     font-size: 1.1em;
-    border-radius: 2px;
+    border-radius: 5px;
     letter-spacing: 1px;
     }
     
     .cbp-mc-form input.cbp-mc-submit:hover {
-    background: #1478b1;
+    background: rgb(165, 12, 12);
     }
     
     @media screen and (max-width: 70em) {

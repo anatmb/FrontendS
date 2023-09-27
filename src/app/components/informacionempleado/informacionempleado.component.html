@@ -46,8 +46,8 @@
                             <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama"
                                 class="img-fluid bg-black foto m-4" width="198" height="0">
             
-                            <button type="button" class="btn btn-success">Activo</button>
-                            <h6>{{empleado.estadoEmpleado}}</h6>
+                            <button type="button" class="btn btn-success">{{empleado.estadoEmpleado}}</button>
+                            <h6>Estado</h6>
 
                             <p> {{empleado.nombreEmpleado}} {{empleado.apellidoEmpleado}}</p>
                            
@@ -154,10 +154,7 @@
                         <li> <label for="btn-modal" class="lbl-modal">U<br>n<br>i<br>f<br>o<br>r<br>m<br>e<br>s</label>
                         </li>
                     </ul>
-                </div>
-
-
-
+                </div>.
                 <input type="checkbox" id="btn-modal">
                 <div class="modal">
                     <div class="contenedor">
@@ -222,18 +219,18 @@
                         <div class="foto col-lg-3 bg-white">
                             <img src="../../../assets/img/Rectangle282.jpg" alt="Organigrama" class="img-fluid foto m-4"
                                 width="198" height="0">
-                            <button type="button" class="btn btn-success">Activo</button>
+                            <button type="button" class="btn btn-success">{{empleado.estadoEmpleado}}</button>
                             <h6>Estado</h6>
-                            <p>Lopez Peralta, Edgardo </p>
+                            <p>{{empleado.nombreEmpleado}} {{empleado.apellidoEmpleado}} </p>
                         </div>
                         <div class="col-lg-9 cursos">
 
                             <div class="row">
 
                                 <div class="col-lg-12 my-2">
-                                    <label class="mx-2 titulo " for="name">Fecha últimas entrega</label>
+                                    <label class="mx-2 titulo " for="name">{{indumentaria.ultimaentrega}}</label>
                                     <input type="text" id="name" name="user_name" />
-                                    <label for="name " class="mx-2 titulo">Fecha de próxima entrega</label>
+                                    <label for="name " class="mx-2 titulo">{{indumentaria.proximaentrega}}</label>
                                     <input type="text" id="name" style="width: 200px;" name="user_name" />
                                     <br>
                                 </div>
@@ -241,7 +238,7 @@
 
                                 <div class="col-lg-12">
                                     <label class="my-2 mx-2 titulo" for="name">Uniforme 1:</label>
-                                    <input type="text" id="name" name="user_name" />
+                                    <input type="text" id="name" name="user_name" [(ngModel)]="indumentaria.tipoIndumentaria" required/>
 
                                     <table class="table cabeza ">
                                         <thead>
@@ -253,28 +250,28 @@
                                         <tbody>
                                             <tr class="fila1">
                                                 <th scope="col">Pantalon</th>
-                                                <th scope="row">38</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                             <tr class="fila1">
                                                 <th scope="col">Chomba</th>
-                                                <th scope="row">L</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                             <tr class="fila1">
                                                 <th scope="col">Zapato</th>
-                                                <th scope="row">42</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                             <tr class="fila1">
                                                 <th scope="col">Polar</th>
-                                                <th scope="row">XL</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                             <tr class="fila1">
                                                 <th scope="col">Campera</th>
-                                                <th scope="row">XL</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                         </tbody>
                                     </table>
                                     <label class="my-2 mx-2 titulo" for="name">Uniforme 2:</label>
-                                    <input class="my-2 mx-2 " type="text" id="name" name="user_name" />
+                                    <input class="my-2 mx-2 " type="text" id="name" name="user_name" [(ngModel)]="indumentaria.tipoIndumentaria" required />
 
 
                                     <table class="table cabeza ">
@@ -287,23 +284,23 @@
                                         <tbody>
                                             <tr class="fila1">
                                                 <th scope="col">Pantalon</th>
-                                                <th scope="row">38</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                             <tr class="fila1">
                                                 <th scope="col">Chomba</th>
-                                                <th scope="row">L</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                             <tr class="fila1">
                                                 <th scope="col">Zapato</th>
-                                                <th scope="row">42</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                             <tr class="fila1">
                                                 <th scope="col">Polar</th>
-                                                <th scope="row">XL</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                             <tr class="fila1">
                                                 <th scope="col">Campera</th>
-                                                <th scope="row">XL</th>
+                                                <th scope="row">{{indumentaria.talleIndumentaria}}</th>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -311,8 +308,6 @@
                             </div>
                             <div class="botones">
                                 <button type="button" class="btn btn-primary m-2">Modificar</button>
-                                <button type="button" class="btn btn-success m-2">Guardar</button>
-                                <button type="button" class="btn btn-danger m-2">Borrar</button>
                             </div>
                         </div>
                     </div>
@@ -505,8 +500,6 @@
                             </table>
                             <div class="botones">
                                 <button type="button" class="btn btn-primary m-2">Modificar</button>
-                                <button type="button" class="btn btn-success m-2">Guardar</button>
-                                <button type="button" class="btn btn-danger m-2">Borrar</button>
                             </div>
                         </div>
                     </div>
@@ -514,4 +507,12 @@
             </div>
         </div>
     </section>
-    <app-footer></app-footer>
+    <footer class=" d-flex bg-black justify-content-between text-white p-2 navbar-fixed-bottom ">
+        <p class="float-end">
+          Buenos Aires - Argentina - 2023
+        </p>
+        <p>
+          Copyright:
+          <a href="https://moreirafrontend.web.app/"> M M Dev.</a>
+        </p>
+      </footer>
