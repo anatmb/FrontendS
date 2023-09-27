@@ -8,6 +8,7 @@ import { InformacionempleadoComponent } from './components/informacionempleado/i
 import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado.component';
+import { SistemaComponent } from './components/sistema/sistema.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,9 @@ const routes: Routes = [
  {path:'empleado', component:EmpleadoComponent},
  {path:'informacionempleado/:id', component:InformacionempleadoComponent},
  {path:'editempleado/:id', component:EditempleadoComponent},
- {path:'nuevoempleado', component:NuevoempleadoComponent}
+ {path:'nuevoempleado', component:NuevoempleadoComponent},
+ {path:'sistema', component:SistemaComponent}
+
 ];
 
 @NgModule({
