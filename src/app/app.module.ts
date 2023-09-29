@@ -10,10 +10,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GpsComponent } from './components/gps/gps.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import {HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InformacionempleadoComponent } from './components/informacionempleado/informacionempleado.component';
 import { EditempleadoComponent } from './components/editempleado/editempleado.component';
 import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado.component'
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -31,10 +32,12 @@ import { NuevoempleadoComponent } from './components/nuevoempleado/nuevoempleado
 
   ],
   imports: [
-    BrowserModule,
     FormsModule,
+    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    CommonModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

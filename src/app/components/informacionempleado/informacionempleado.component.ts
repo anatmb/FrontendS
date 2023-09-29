@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NonNullableFormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment'
 import { Fecha } from 'src/app/model/Fecha.model';
+import { Indumentaria } from 'src/app/model/Indumentaria.model';
 import { PersonaEmpleado } from 'src/app/model/PersonaEmpleado.model';
 import { FechaService } from 'src/app/service/fecha.service';
 import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.service';
+import { ServiceindumentariaService } from 'src/app/service/serviceindumentaria.service';
 
 @Component({
   selector: 'app-informacionempleado',
@@ -14,7 +15,7 @@ import { PersonaServiceTsService } from 'src/app/service/persona.service.ts.serv
 })
 export class InformacionempleadoComponent implements OnInit {
   empleado: PersonaEmpleado= new PersonaEmpleado(' ', ' ', ' ', ' ', ' ',new Date(),new Date(), ' ', ' ',0, ' ', ' ', ' ', ' ');
-
+  indumentaria: Indumentaria= new Indumentaria(' ',' ', ' ', new Date(), new Date());
   fechahabiles: string= " ";
 
   title(title: any) {
@@ -39,7 +40,8 @@ export class InformacionempleadoComponent implements OnInit {
   constructor(private router:Router,
     private activatedRouter: ActivatedRoute, 
     private empleadoS: PersonaServiceTsService,
-    private fechaS: FechaService
+    private fechaS: FechaService,
+    private indumentariaS:ServiceindumentariaService
     ) { }
 
   ngOnInit(): void {
@@ -51,6 +53,11 @@ export class InformacionempleadoComponent implements OnInit {
         console.log("imprimir DNI "+this.empleado.dniempleado);
       }
     )
+
+    this.indumentariaS.detail(id).subscribe(
+      dataI=>{
+        this. indumentaria=dataI;
+      })
   }
   main(){
     this.router.navigate(['/main'])
